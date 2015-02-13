@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Gameboard>
+    <Square id="0" type="CENTRAL_BANK">
+    <name>Central Bank</name>
+    </Square>
+    
+    <Square id="1" type="SITE">
+        <name>Patras</name>
+            <colour>LIGHTBLUE</colour>
+            <basePrice>1000</basePrice>
+            <baseRent>800</baseRent>
+    </Square>
+    
+    <Square id="2" type="SITE">
+        <name>Thessaloniki</name>
+            <colour>LIGHTBLUE</colour>
+            <basePrice>1500</basePrice>
+            <baseRent>1000</baseRent>
+    </Square>
+    
+    <Square id="3" type="SITE">
+        <name>Athens</name>
+            <colour>LIGHTBLUE</colour>
+            <basePrice>2000</basePrice>
+            <baseRent>1200</baseRent>
+    </Square>
+    
+    <Square id="4" type="TAX">
+        <name>Tax 1</name>
+    </Square>
+    
+    <Square id="5" type="SITE">
+        <name>Valencia</name>
+            <colour>ORANGE</colour>
+            <basePrice>2000</basePrice>
+            <baseRent>1200</baseRent>
+    </Square>
+    
+    <Square id="6" type="SITE">
+        <name>Barcelona</name>
+            <colour>ORANGE</colour>
+            <basePrice>2500</basePrice>
+            <baseRent>1400</baseRent>
+    </Square>
+    
+    <Square id="7" type="SITE">
+        <name>Madrid</name>
+            <colour>ORANGE</colour>
+            <basePrice>3000</basePrice>
+            <baseRent>1600</baseRent>
+    </Square>
+    
+    <Square id="8" type="RANDOM_EVENT">
+        <name>Random Event 1</name>
+    </Square>
+    
+    <Square id="9" type="SITE">
+        <name>Salvador</name>
+            <colour>GREEN</colour>
+            <basePrice>3000</basePrice>
+            <baseRent>1600</baseRent>
+    </Square>
+    
+    <Square id="10" type="SITE">
+        <name>São Paulo</name>
+            <colour>GREEN</colour>
+            <basePrice>3500</basePrice>
+            <baseRent>1800</baseRent>
+    </Square>
+    
+    <Square id="11" type="SITE">
+        <name>Rio de Janerio</name>
+            <colour>GREEN</colour>
+            <basePrice>4000</basePrice>
+            <baseRent>2000</baseRent>
+    </Square>
+    
+    <Square id="12" type="TAX">
+        <name>Tax 2</name>
+    </Square>
+    
+    <Square id="13" type="SITE">
+        <name>Gizeh</name>
+            <colour>YELLOW</colour>
+            <basePrice>4000</basePrice>
+            <baseRent>2000</baseRent>
+    </Square>
+    
+    <Square id="14" type="SITE">
+        <name>Alexandria</name>
+            <colour>YELLOW</colour>
+            <basePrice>4500</basePrice>
+            <baseRent>2200</baseRent>
+    </Square>
+    
+    <Square id="15" type = "SITE">
+        <name>Cairo</name>
+            <colour>YELLOW</colour>
+            <basePrice>5000</basePrice>
+            <baseRent>2400</baseRent>
+    </Square>
+    
+    <Square id="16" type="RANDOM_EVENT">
+        <name>Random Event 2</name>
+    </Square>
+     
+     <Square id="17" type="SITE">
+        <name>Saint Petersburg</name>
+            <colour>PURPLE</colour>
+            <basePrice>5000</basePrice>
+            <baseRent>2400</baseRent>
+    </Square>
+    
+    <Square id="18" type="SITE">
+        <name>Stalingrad</name>
+            <colour>PURPLE</colour>
+            <basePrice>5500</basePrice>
+            <baseRent>2600</baseRent>
+    </Square>
+    
+    <Square id="19" type="SITE">
+        <name>Moscow</name>
+            <colour>PURPLE</colour>
+            <basePrice>6000</basePrice>
+            <baseRent>2800</baseRent>
+    </Square>
+    
+    <Square id="8" type="TAX">
+        <name>Tax 3</name>
+    </Square>
+    
+    <Square id="21" type="SITE">
+        <name>Chicago</name>
+            <colour>BLUE</colour>
+            <basePrice>6000</basePrice>
+            <baseRent>2800</baseRent>
+    </Square>
+    
+    <Square id="22" type="SITE">
+        <name>Los Angeles</name>
+            <colour>BLUE</colour>
+            <basePrice>6500</basePrice>
+            <baseRent>3000</baseRent>
+    </Square>
+    
+    <Square id="23" type="SITE">
+        <name>New York</name>
+            <colour>BLUE</colour>
+            <basePrice>7000</basePrice>
+            <baseRent>3200</baseRent>
+    </Square>
+    
+    <Square id="24" type="RANDOM_EVENT">
+        <name>Random Event 3</name>
+    </Square>
+    
+    <Square id="25" type="SITE">
+        <name>Cork</name>
+            <colour>IRISHGREEN</colour>
+            <basePrice>7000</basePrice>
+            <baseRent>3200</baseRent>
+    </Square>
+    
+    <Square id="26" type="SITE">
+        <name>Dublin</name>
+            <colour>IRISHGREEN</colour>
+            <basePrice>7500</basePrice>
+            <baseRent>3400</baseRent>
+    </Square>
+    
+    <Square id="27" type="SITE">
+        <name>Belfast</name>
+            <colour>IRISHGREEN</colour>
+            <basePrice>8000</basePrice>
+            <baseRent>3600</baseRent>
+    </Square>
+    
+    <Square id="8" type="TAX">
+        <name>Tax 4</name>
+    </Square>
+    
+    <Square id="29" type="SITE">
+        <name>Sharjah</name>
+            <colour>RED</colour>
+            <basePrice>8000</basePrice>
+            <baseRent>3600</baseRent>
+    </Square>
+    
+    <Square id="30" type="SITE">
+        <name>Dubai</name>
+            <colour>RED</colour>
+            <basePrice>8500</basePrice>
+            <baseRent>3800</baseRent>
+    </Square>
+    
+    <Square id="31" type="SITE">
+        <name>Abu Dhabi</name>
+            <colour>RED</colour>
+            <basePrice>9000</basePrice>
+            <baseRent>4000</baseRent>
+    </Square>
+        
+</Gameboard>

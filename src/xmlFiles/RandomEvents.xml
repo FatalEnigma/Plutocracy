@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<randomevent>
+	<event optional = "false">
+		<text>You have been given a sum of money by the rich entrepreneur Mista Sora, to do with as you please.</text>
+		<karmachange>0</karmachange>
+		<karmaLowerBound>-4</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>10000</cashChange>
+		<textResponse>You gain 10000 pounds! Mr Sora is very generous!</textResponse>
+
+	</event>
+	<event optional = "false">
+		<text>A corrupt and disgruntled employee of your bank blackmails you out of a sizable sum due to ill treatment.</text>
+		<karmachange>-2</karmachange>
+		<karmaLowerBound>-4</karmaLowerBound>
+		<karmaUpperBound>-1</karmaUpperBound>
+		<cashChange>-10000</cashChange>
+		<textResponse>You have lost respect amongst your employees, and 10000 pounds along with that.</textResponse>
+	</event>
+	<event optional = "true">
+		<text>A powerful friend asks to have access to your bank's computer systems so he can 
+                      raise his and your own bonus paycheck for the year. If you accept by clicking 'Yes', you will receive a worthy prize, but at what cost?</text>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<yes>
+			<karmachange>-5</karmachange>
+			<cashChange>10000</cashChange>
+			<textResponseYes>You gain 10000 pounds from your illicit activities, but your karma suffers greatly.</textResponseYes>
+		</yes>
+		<no>
+			<karmachange1>2</karmachange1>
+			<cashChange1>5000</cashChange1>
+			<textResponseNo>You receive a bonus to your paycheck anyway for moral behaviour; your halo is positively shining! Gain 5000 pounds.</textResponseNo>
+		</no>
+	</event>
+	<event optional = "false">
+		<text>You receive a grant for the charity work that you have put your heart and soul into.</text>
+		<karmachange>0</karmachange>
+		<karmaLowerBound>3</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>3000</cashChange>
+		<textResponse>A job well done! No orphans will suffer while you're around; gain 3000 pounds!</textResponse>
+	</event>
+	<event optional = "false">
+		<text>A competitor has gone bust because of your Bank's success! Gloat and collect 10000 pounds.</text>
+		<karmachange>-1</karmachange>
+		<karmaLowerBound>-4</karmaLowerBound>
+		<karmaUpperBound>3</karmaUpperBound>
+		<cashChange>10000</cashChange>
+		<textResponse>What luck! However, a tiny voice at the back of your mind tells you to be careful.. karma may catch up with you.</textResponse>
+	</event>
+	<event optional = "false">
+		<text>You are obliged to put money toward the funeral of a beloved employee's wife. RIP Gifford's wife.</text>
+		<karmachange>2</karmachange>
+		<karmaLowerBound>1</karmaLowerBound>
+		<karmaUpperBound>3</karmaUpperBound>
+		<cashChange>-3000</cashChange>
+		<textResponse>A heavy loss for your bank account, but just think of Gifford's loss! Pay 3000, but feel comforted in your moral high ground.</textResponse>
+	</event>
+	<event optional = "false">
+		<text>Your favourite employee has nominated you for Banker Of The Year! Collect 5000 pounds.</text>
+		<karmachange>1</karmachange>
+		<karmaLowerBound>-3</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>5000</cashChange>
+		<textResponse>Your faithful employees love you; especially your loyal dogsbody Gifford.</textResponse>
+	</event>
+	<event optional = "true">
+		<text>You have stumbled upon a colleague dealing drugs and potentially harming his own 
+		      health and the health of those around him. Do you report him (Yes), or take a bribe(No)?</text>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>	
+		<yes>
+			<karmachange>3</karmachange>
+			<cashChange>-1000</cashChange>
+			<textResponseYes>Helping him to help himself ensures that his life is set back on track and that you are seen as a devoted employer. Pay 1000 for his care, but gain respect from all.</textResponseYes>
+		</yes>
+		<no>
+		    <karmachange1>-3</karmachange1>
+			<cashChange1>5000</cashChange1>
+			<textResponseNo>Gain 5000 by hiring a new, young and bright employee who works hard for the company. However, your conscience is heavy..</textResponseNo>
+		</no>
+	</event>
+	<event optional = "true">
+		<text>Your faithful employee Gifford has asked for some time off to recover from stress and for 'Personal Reasons' 
+		      desires not to be contacted. You need him, and you will lose money if you grant his time off. Allow it?</text>
+		<karmaLowerBound>-3</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>-2000</cashChange>
+		<yes>
+			<karmachange>2</karmachange>
+			<cashChange>-4000</cashChange>
+			<textResponseYes>Lose 4000 pounds from Gifford's work not getting done, but pat yourself on the back for being a model employer.</textResponseYes>
+		</yes>
+		<no>
+			<karmachange1>-2</karmachange1>
+			<cashChange1>4000</cashChange1>
+			<textResponseNo>Gain 4000 pounds from Gifford's productiveness, but it seems you have angered the other employees by keeping Gifford in; he is as gloomy as a raincloud.</textResponseNo>
+		</no>
+	</event>
+	<event optional = "true">
+		<text>It is the end of the financial year; you can either pay dividends(Yes) or re-invest(No).</text>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<yes>
+			<karmachange>1</karmachange>
+			<cashChange>-3000</cashChange>
+			<textResponseYes>You chose to pay dividends, lose 3000 pounds, but gain popularity!</textResponseYes>
+		</yes>
+		<no>
+			<karmachange1>-1</karmachange1>
+			<cashChange1>1000</cashChange1>
+			<textResponseNo>You chose to re-invest, lose 1000 pounds and a little bit of popularity!</textResponseNo>
+		</no>
+	</event>
+	<event optional = "false">
+		<text>ALIENS ATTACK EARTH! Receive 5000 pounds for helping them.</text>
+		<karmachange>-1</karmachange>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>4</karmaUpperBound>
+		<cashChange>5000</cashChange>
+		<textResponse>You knew your crop circles would get through to them eventually! And people thought you were crazy.. who's laughing now?! HAHAHAHAHAHAHAHAHAHAHAAHAHHAHHAAHHAHAHAA.</textResponse>
+	</event>
+	<event optional = "false">
+		<text>You win 'Mr Nice Guy Of The Year': everyone envies and hates you. Collect 2000 pounds.</text>
+		<karmachange>0</karmachange>
+		<karmaLowerBound>2</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>2000</cashChange>
+		<textResponse>You're awesome! Enjoy it!</textResponse>
+	</event>
+	<event optional = "true">
+		<text>An employee invites you out for a drink, then accuses you of unprofessional behaviour when you accept. Do you leave and maintain your dignity(Yes), or pursue her as a love interest?(No)</text>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+	        <yes>
+			<karmachange>3</karmachange>
+			<cashChange>-500</cashChange>
+			<textResponseYes>You walk out with your head held high, you weren't doing anything wrong; you're two friends going for a drink, how is that unprofessional? Pay for your drink and leave with respect.</textResponseYes>
+		</yes>
+		<no>
+			<karmachange1>-2</karmachange1>
+			<cashChange1>-2000</cashChange1>
+			<textResponseNo>You've always loved this employee, who is married to your friend. Lose her respect, and 2000 pounds in a court case.</textResponseNo>
+		</no>
+	</event>
+	<event optional = "false">
+		<text>You crash into the car of the CEO of Morgan Stanley. He is not sure whether it was deliberate. And neither are you. Pay 8000 pounds in damages.</text>
+		<karmachange>-2</karmachange>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>-8000</cashChange>
+		<textResponse>The police find out that it was in fact an attempt to get ahead in the world of business; the dirty way. Lose 8000 pounds in damages and the respect of your peers.</textResponse>
+	</event>
+	<event optional = "false">
+		<text>You are rewarded for organising a financial workshop for schools in your area. Receive a 10000 pound bonus.</text>
+		<karmachange>2</karmachange>
+		<karmaLowerBound>-3</karmaLowerBound>
+		<karmaUpperBound>3</karmaUpperBound>
+		<cashChange>10000</cashChange>
+		<textResponse>Admiration and money are flowing your way!</textResponse>
+	</event>
+	<event optional = "true">
+		<text>The evil dictator Kane attacks the UK. Do you donate 10000 pounds to the war effort(Yes), or join forces with the evil Kane; your actions having perhaps untold consequences?(No)</text>
+		<karmaLowerBound>-4</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<yes>
+			<karmachange>4</karmachange>
+			<cashChange>-10000</cashChange>
+			<textResponseYes>Your efforts were in vain, however, you gather a small group of rebels, and fight for your country!</textResponseYes>
+		</yes>
+		<no>
+			<karmachange1>-4</karmachange1>
+			<cashChange1>1000</cashChange1>
+			<textResponseNo>You receive a measly 1000 pounds for your loyalty to Kane.</textResponseNo>
+		</no>
+	</event>
+	<event optional = "false">
+		<text>A fellow employee needs help with some work while he sorts out his mid-life crisis. Receive his paycheck of 300 pounds for your valiant efforts.</text>
+		<karmachange>2</karmachange>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>300</cashChange>
+		<textResponse>It's not all about money!</textResponse>
+	</event>
+	<event optional = "true">
+		<text>One of the protesters outside your bank campaigning for gender equality criticises your treatment of women. Do you simply walk away, muttering 'Silly angry feminist..' under your breath (Yes), or do you hand her your gender equality propostion that you've been working on, and let her read over it? (No)</text>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>3</karmaUpperBound>
+		 <yes>
+			<karmachange>-1</karmachange>
+			<cashChange>-1000</cashChange>
+			<textResponseYes>You lose money and karma due to handling the protest badly, even though you are all in favour of gender equality.</textResponseYes>
+		</yes>
+		<no>
+			<karmachange1>2</karmachange1>
+			<cashChange1>1000</cashChange1>
+			<textResponseNo>You gain favour with women's rights unions; gain 1000 pounds!</textResponseNo>
+		</no>
+	</event>
+	<event optional = "false">
+		<text>A disturbing story has been circulating in the national paper about you; pay them 9000 pounds to keep quiet.</text>
+		<karmachange>-1</karmachange>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>1</karmaUpperBound>
+		<cashChange>-9000</cashChange>
+		<textResponse>Karma catches up with you eventually!</textResponse>
+	</event>
+	<event optional = "false">
+		<text>It's time for the Christmas Party! Enjoy yourself and gain 3000 pounds from grateful employees, this is a time of good will!</text>
+		<karmachange>2</karmachange>
+		<karmaLowerBound>-5</karmaLowerBound>
+		<karmaUpperBound>5</karmaUpperBound>
+		<cashChange>3000</cashChange>
+		<textResponse>Gain respect for being a super great employer! Just try not to gain 3000 pounds in weight after eating all that Christmas food!</textResponse>
+	</event>
+</randomevent>

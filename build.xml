@@ -1,0 +1,132 @@
+<project basedir="." default="package" name="plutocracy">
+	<!-- Properties -->
+	<property name="src" value="src" />
+	<property name="bin" value="bin" />
+	<property name="junit.reports" value="reports" />
+	<property name="libraries" value="libs" />
+
+	<property name="junit.results" value="${junit.reports}/test-results" />	
+	<!-- Although the tests themselves are in bin/tests, when java compiles
+		them, the name off the class becomes "tests/classTest.class" as
+		"tests" is a package, but once compiled the classes are no longer
+		in their packages.
+		
+		This means the junit.tests must point to the "bin" folder,
+		(as that's where the tests actually are apparently) and then
+		we use reqular expressions to drill down to the tests themselves.
+	-->
+	<property name="junit.tests" value="${bin}" />
+	
+	<property name="jdoc" value="jDocs" />
+	<property name="src.main" value="${src}/plutocracy"/>
+	<property name="src.tests" value="${src}/tests"/>
+	<property name="src.gui" value="${src}/plutocracyGUI"/>
+	
+	<property name="resources" value="${src.gui}/resources" />
+	<property name="xml" value="${src}/xmlFiles" />
+
+	<!-- Sets up the classpath -->
+	<path id="classpath">
+		<pathelement location="${src.main}"/>
+		<pathelement location="${src.gui}"/>
+		<pathelement location="${bin}"/>
+		<pathelement location="${libraries}/junit-4.11.jar" />
+		<pathelement location="${libraries}/hamcrest-core-1.3.jar" />
+	</path>
+
+	<!-- Packages the project -->
+	<target name="package" depends="clean, compile, report, jDoc">
+		<echo message="Moving XML resources for packaging."/>
+		<copy todir="${bin}/xmlFiles">
+			<fileset dir="${xml}" />
+		</copy>
+		<echo message="Moving GUI resources for packaging."/>
+		<copy todir="${bin}/plutocracyGUI/resources">
+			<fileset dir="${resources}" />
+		</copy>
+		<echo message="Package the project:"/>
+		<jar destfile="Plutocracy.jar" basedir="${bin}" excludes="tests/**" whenmanifestonly="fail">
+			<manifest>
+                <attribute name="Main-Class" value="plutocracy.Main"/>
+            </manifest>
+		</jar>
+	</target>
+
+	<!-- Compiles the Project -->
+	<target name="compile" depends="configure">
+		<!-- Compile the game -->
+		<echo message="Compiling the game:" />
+		<javac debug="true" includeantruntime="false" destdir="${bin}">
+			<src path="${src.main}" />
+			<src path="${src.gui}" />
+			<classpath refid="classpath" />
+		</javac>
+		<!-- Compile the tests -->
+		<echo message="Compiling the tests:"/>
+		<javac debug="true" includeantruntime="false" destdir="${bin}">
+			<src path="${src.tests}" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<!-- Generates the JavaDoc -->
+	<target name="jDoc">
+		<mkdir dir="${jdoc}" />
+		<javadoc packagenames="plutocracy.*, plutocracyGUI.*"
+			sourcepath="src"
+			defaultexcludes="yes"
+			destdir="${jdoc}"
+			author="false"
+			version="true"
+			use="true"
+			windowtitle="Plutocracy Documentation">
+		</javadoc>
+	</target>
+		
+	
+	<!-- Cleans the project -->
+	<target name="clean" depends="start">
+		<echo message="Cleaning up the project directory..."/>
+		<delete dir="${bin}" />
+		<delete dir="${junit.reports}" />
+		<delete dir="${jDocs}" />
+	</target>
+
+	<target name="start">
+		<echo message="${ant.version}"/>
+	</target>
+	
+	<!-- Configures the project's resrcs -->
+	<target name="configure">
+		<echo message="Creating bin directory:"/>
+		<mkdir dir="${bin}" />
+	</target>
+
+	<!-- Run the unit tests -->
+	<target name="test">
+		<echo message="Creating test-result directories:"/>
+		<mkdir dir="${junit.reports}" />
+		<mkdir dir="${junit.results}"/>
+		<echo message="Perform tests:"/>
+		<junit fork="yes" printsummary="true">
+			<formatter type="xml" />
+			<classpath refid="classpath" />
+			<batchtest todir="${junit.results}">
+				<fileset dir="${junit.tests}">
+					<include name="tests/*Test.class"/>
+					<exclude name="tests/GUI*"/>
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+	<!-- Produces junit test reports -->
+	<target name="report" depends="test">
+		<echo message="Generating test reports:"/>
+		<junitreport todir="${junit.reports}">
+			<fileset dir="${junit.results}"/>
+			<report todir="${junit.reports}"/>
+		</junitreport>
+	</target>
+	
+</project>
